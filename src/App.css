@@ -1,38 +1,76 @@
-.App {
+/* Global Rules  */
+
+* {
+  box-sizing: border-box;
+}
+
+.red {
+  border: 10px solid red;
+}
+.yellow {
+  border: 10px solid yellow;
+}
+.green {
+  border: 10px solid green;
+}
+.blue {
+  border: 10px solid blue;
+}
+.beige {
+  border: 10px solid #f8c5af;
+}
+
+/* ----------- */
+
+.header {
+  background-color: #333333;
+  font-size: 30px;
+  color: white;
   text-align: center;
+  padding: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1024px;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.job {
+  width: calc((100% / 3) - (90px / 3));
+  margin-top: 60px;
+  height: 300px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.job div:first-child {
+  height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.job h3 {
+  text-align: left;
+  font-size: 30px;
+  line-height: 35px;
+}
+.footer {
+  background-color: #dddddd;
+  text-align: center;
+  margin-top: 30px;
+  padding: 30px;
+}
+.footer span {
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1024px) {
+  .container {
+    justify-content: space-around;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .job {
+    width: calc((80% / 2));
+    margin-top: 60px;
+    height: 300px;
   }
 }
